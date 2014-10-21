@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang=en>
+<head>
+<title>APSD Development Dashboard</title>
+<script type="text/javascript">
+</script>
+<link href="//cloud.webtype.com/css/094b1fa9-6433-4dce-966d-931c186185d8.css" rel="stylesheet" type="text/css"/>
+<style>html{background:#000}body{margin:0;background:transparent}video{position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;width:auto;height:auto;z-index:-100;background:url(http://themcb.github.io/ctllogo.png) no-repeat;background-size:cover;-webkit-transition:1s opacity;transition:1s opacity}div{font-family:Agenda-Light,Agenda\ Light,Agenda,Arial\ Narrow,sans-serif;font-weight:100;background:rgba(0,0,0,.3);color:#fff;padding:2rem;width:94%;margin:2rem;float:right;font-size:1.2rem}h1{font-size:3rem;text-transform:uppercase;margin-top:0;letter-spacing:.3rem}a{display:inline-block;color:#fff;text-decoration:none;background:rgba(0,0,0,.5);padding:.5rem;-webkit-transition:.6s background;transition:.6s background}a:hover{background:rgba(0,0,0,.9)}.stopfade{opacity:.5}#polina button{display:block;width:94%;padding:.4rem;border:none;margin:1rem auto;font-size:1.3rem;background:rgba(255,255,255,.23);color:#fff;border-radius:3px;cursor:pointer;-webkit-transition:.3s background;transition:.3s background}#polina button:hover{background:rgba(0,0,0,.5)}@media screen and (max-width:500px){div{width:70%}}@media all and (max-device-width:800px){body{background:url(http://themcb.github.io/ctllogo.png) #000 no-repeat center center fixed;background-size:cover}#bgvid,#polina button{display:none}div{width:70%}}</style>
+<meta charset=utf-8>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-9896842-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+<video autoplay loop poster="http://themcb.github.io/ctllogo.png" id="bgvid">
+<source src="http://themcb.github.io/clouds.MP4" type="video/mp4">
+</video>
+<div id="polina">
+<embed src="https://apsdctl.atlassian.net/plugins/servlet/Wallboard/?dashboardId=10301&dashboardId=10302&dashboardId=10400&dashboardId=10401&dashboardId=10403&dashboardId=10404&dashboardId=10402&cyclePeriod=30000&transitionFx=fade&random=false" width=1800 height=900 />
+</div>
+<script>var video=document.getElementById("bgvid"),pauseButton=document.querySelector("#polina button");function vidFade(){video.classList.add("stopfade");}
+video.addEventListener('ended',function()
+{video.pause();vidFade();},false);pauseButton.addEventListener("click",function(){video.classList.toggle("stopfade");if(video.paused){video.play();pauseButton.innerHTML="Pause";}else{video.pause();pauseButton.innerHTML="Paused";}},false);video.addEventListener('touchstart',function(e){e.preventDefault();video.play();})</script>
+</body>
+</html>
