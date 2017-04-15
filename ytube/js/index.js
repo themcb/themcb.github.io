@@ -5,7 +5,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-<script>
  function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('muteYouTubeVideoPlayer', {
@@ -32,4 +31,3 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
  }
 
  // Written by @labnol 
-</script>
