@@ -133,13 +133,13 @@ a.button {
   border: solid 2px black;
 }
 .project:nth-of-type(8n+1) {
-  background: #ff4c22;
+  background: #1ea20b;
   border-top: 5px solid #ef2d00;
 }
 .project:nth-of-type(8n+1) a,
 .project:nth-of-type(8n+1) a:link,
 .project:nth-of-type(8n+1) a:visited {
-  color: #ff4c22;
+  color: #1ea20b;
 }
 .project:nth-of-type(8n+1) a:hover,
 .project:nth-of-type(8n+1) a:active {
