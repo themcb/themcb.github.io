@@ -5,21 +5,31 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player("ytplayer", {
-      events: {
-        'onStateChange': onPlayerStateChange
+<script>
+ function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('muteYouTubeVideoPlayer', {
+    videoId: 'YOUR_VIDEO_ID', // YouTube Video ID
+    width: 560,               // Player width (in px)
+    height: 316,              // Player height (in px)
+    playerVars: {
+      autoplay: 1,        // Auto-play the video on load
+      controls: 1,        // Show pause/play buttons in player
+      showinfo: 0,        // Hide the video title
+      modestbranding: 1,  // Hide the Youtube Logo
+      loop: 1,            // Run the video in a loop
+      fs: 0,              // Hide the full screen button
+      cc_load_policy: 0, // Hide closed captions
+      iv_load_policy: 3,  // Hide the Video Annotations
+      autohide: 0         // Hide video controls when playing
+    },
+    events: {
+      onReady: function(e) {
+        e.target.mute();
       }
-    });
-  }
-  //
-function onPlayerStateChange(event) {
-  if (event.data === 0) {
-    event.target.playVideo()
-  }
+    }
+  });
+ }
 
-  if (event.data === 1) {
-    event.target.setVolume(45);
-  }
-}
+ // Written by @labnol 
+</script>
