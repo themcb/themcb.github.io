@@ -25,38 +25,7 @@
 <div id="box2" class="box blurred-bg tinted">
   <div class="content">
     <h1>Video Test</h1>
-   <div id="muteYouTubeVideoPlayer"></div>
-    </div>
-
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <script>
-      function onYouTubeIframeAPIReady() {
-        var player;
-        player = new YT.Player('muteYouTubeVideoPlayer', {
-          videoId: 'XsW1RHAfn3o', // YouTube Video ID
-          width: 560,             // Player width (in px)
-          height: 316,            // Player height (in px)
-          playerVars: {
-            autoplay: 1,        // Auto-play the video on load
-            controls: 1,        // Show pause/play buttons in player
-            showinfo: 1,        // Hide the video title
-            modestbranding: 1,  // Hide the Youtube Logo
-            loop: 1,            // Run the video in a loop
-            fs: 1,              // Hide the full screen button
-            cc_load_policty: 0, // Hide closed captions
-            iv_load_policy: 3,  // Hide the Video Annotations
-            autohide: 1         // Hide video controls when playing
-          },
-          events: {
-            onReady: function(e) {
-              e.target.mute();
-            }
-          }
-        });
-      }
-    </script>
-  </div>
-</div>
+ <iframe width="560" height="200" src="https://www.youtube.com/embed/Cbti19KM3wk?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
 
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
