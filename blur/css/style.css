@@ -35,7 +35,7 @@ body {
   width: 500px;
   height: 300px;
   left: -webkit-calc( 50% - 250px );
-  top: 20%;
+  top: 10%;
   position: absolute;
   border-radius: 5px;
   -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
